@@ -1,2 +1,2 @@
 # WebDevelopment
-Complete Intro to Web Developmen from "FrontEndMasters"
+Complete Intro to Web Developmen v3 from "FrontEndMasters"
