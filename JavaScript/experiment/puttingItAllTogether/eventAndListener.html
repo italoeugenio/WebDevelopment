@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event and Listener</title>
+    <style>
+      .event-button {
+        width: 100px;
+        height: 50px;
+      }
+
+      .color-box{
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+      }
+
+      .button-container{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Test 1 -->
+    <button class="event-button">Click me!!!</button>
+    <br></br>
+
+     <!-- Test 2 -->
+    <input placeholder="type into me!" class="input-to-copy" />
+    <p class="p-to-copy-to">Nothing has happened yet.</p>
+    <br></br>
+
+     <!-- Test 3-->
+    <div class="color-box"></div>
+    <br>
+    <input class="color-input" placeholder="Type a color here">
+    <br></br>
+
+    <!-- Test 3-->
+     <div class="button-container">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+     </div>
+
+    <script>
+    // Test 1
+      const button = document.querySelector(".event-button");
+      button.addEventListener("click", function () {
+        alert("test");
+      });
+
+      function test() {
+        console.log("You are calling a funtion to test eventListener");
+      }
+
+      // Test 2
+      const input = document.querySelector('.input-to-copy');
+      const paragraph = document.querySelector('.p-to-copy-to')
+
+      input.addEventListener("keyup", function(){
+        paragraph.innerText = input.value
+      })
+
+      // Test 3
+      const colorBox = document.querySelector('.color-box')
+      const input3 = document.querySelector('.color-input')
+
+      addEventListener("keyup", function(){
+        colorBox.style.backgroundColor = input3.value
+      })
+
+
+      // Test 4
+      document
+      .querySelector('.button-container')
+      .addEventListener("click", function(event){
+        alert(`You clicked on button ${event.target.innerText}`)
+      })
+        
+    </script>
+
+  </body>
+</html>

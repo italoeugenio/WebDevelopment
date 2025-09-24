@@ -1,0 +1,5 @@
+# deps
+node_modules/
+
+# mics
+.DS_Store
